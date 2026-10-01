@@ -5,12 +5,10 @@ V {}
 S {}
 F {}
 E {}
-N -110 -240 -110 -220 {lab=#net1}
 N -40 -70 -40 -40 {lab=GND}
 N -440 -110 -440 -90 {lab=GND}
 N -440 -200 -440 -170 {lab=VDD}
 N -40 -200 -40 -190 {lab=VDD}
-N -110 -310 -110 -300 {lab=VDD}
 N -210 -30 -210 -10 {lab=GND}
 N -210 -90 -150 -90 {lab=#net2}
 N -290 -110 -290 -90 {lab=GND}
@@ -24,14 +22,11 @@ N 270 -90 270 10 {lab=#net2}
 N -170 -370 -170 -170 {lab=vin1}
 N -170 -370 270 -370 {lab=vin1}
 N 270 -370 270 -170 {lab=vin1}
-N -110 -230 310 -230 {lab=#net1}
-N 310 -230 310 -220 {lab=#net1}
 N 490 -130 560 -130 {lab=vout3}
 C {opamp.sym} -190 10 0 0 {name=x1
 
 }
 C {sky130_fd_pr/corner.sym} -350 -350 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {isource.sym} -110 -270 0 0 {name=I0 value=60u}
 C {gnd.sym} -40 -40 0 0 {name=l1 lab=GND}
 C {vsource.sym} -440 -140 0 0 {name=V3 value=1.8 savecurrent=false}
 C {gnd.sym} -440 -90 0 0 {name=l2 lab=GND}
@@ -56,7 +51,6 @@ C {code_shown.sym} -240 -690 0 0 {name=s1 only_toplevel=false value="
 .endc
 "}
 C {vdd.sym} -440 -200 0 0 {name=l5 lab=VDD}
-C {vdd.sym} -110 -310 0 0 {name=l6 lab=VDD}
 C {vdd.sym} -40 -200 0 0 {name=l7 lab=VDD}
 C {lab_pin.sym} 110 -130 0 1 {name=p1 sig_type=std_logic lab=vout2}
 C {lab_pin.sym} -200 -170 3 1 {name=p2 sig_type=std_logic lab=vin1}

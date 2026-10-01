@@ -1,8 +1,7 @@
 * NGSPICE file created from opamp.ext - technology: sky130A
 
-.subckt sky130_fd_pr__cap_mim_m3_1_6HWUPA C1 m3_n3215_n6236#
-X0 C1 m3_n3215_n6236# sky130_fd_pr__cap_mim_m3_1 l=29.98 w=29.99
-X1 C1 m3_n3215_n6236# sky130_fd_pr__cap_mim_m3_1 l=29.98 w=29.99
+.subckt sky130_fd_pr__pfet_01v8_ATEQEE B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=2.61 pd=18.58 as=2.61 ps=18.58 w=9 l=1
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_SR4B9V a_n2035_n757# a_n2195_n843# a_n1835_n731# a_n2093_n731#
@@ -24,12 +23,16 @@ X14 a_n2093_n731# a_n2035_n757# a_n1835_n731# a_n2195_n843# sky130_fd_pr__nfet_0
 X15 a_n1835_n731# a_n2035_n757# a_n2093_n731# a_n2195_n843# sky130_fd_pr__nfet_01v8 ad=1.015 pd=7.29 as=1.015 ps=7.29 w=7 l=1
 .ends
 
-.subckt sky130_fd_pr__pfet_01v8_ATEQEE B D S G
-X0 S G D B sky130_fd_pr__pfet_01v8 ad=2.61 pd=18.58 as=2.61 ps=18.58 w=9 l=1
+.subckt sky130_fd_pr__cap_mim_m3_1_LFDY3D C2 C1
+X0 C1 C2 sky130_fd_pr__cap_mim_m3_1 l=30 w=30
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_FEKDZH D S G B
 X0 S G D B sky130_fd_pr__nfet_01v8 ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_T688GQ B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=0.5
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_B6UCZH D S G B
@@ -59,21 +62,21 @@ X18 S G D B sky130_fd_pr__pfet_01v8 ad=1.25425 pd=8.94 as=1.25425 ps=8.94 w=8.65
 X19 D G S B sky130_fd_pr__pfet_01v8 ad=1.25425 pd=8.94 as=1.25425 ps=8.94 w=8.65 l=1
 .ends
 
-.subckt opamp vdd vss vin1 vin2 vout iref
-Xsky130_fd_pr__cap_mim_m3_1_6HWUPA_0 sky130_fd_pr__pfet_01v8_HNK9NU_0/G vout sky130_fd_pr__cap_mim_m3_1_6HWUPA
-Xsky130_fd_pr__nfet_01v8_SR4B9V_0 iref vss vss vout sky130_fd_pr__nfet_01v8_SR4B9V
+.subckt opamp vdd vss vin1 vin2 vout
 Xsky130_fd_pr__pfet_01v8_ATEQEE_0 vdd sky130_fd_pr__pfet_01v8_ATEQEE_1/G vdd sky130_fd_pr__pfet_01v8_ATEQEE_1/G
 + sky130_fd_pr__pfet_01v8_ATEQEE
+Xsky130_fd_pr__nfet_01v8_SR4B9V_0 vb1 vss vss vout sky130_fd_pr__nfet_01v8_SR4B9V
 Xsky130_fd_pr__pfet_01v8_ATEQEE_1 vdd sky130_fd_pr__pfet_01v8_HNK9NU_0/G vdd sky130_fd_pr__pfet_01v8_ATEQEE_1/G
 + sky130_fd_pr__pfet_01v8_ATEQEE
-Xsky130_fd_pr__nfet_01v8_FEKDZH_0 iref vss iref vss sky130_fd_pr__nfet_01v8_FEKDZH
+Xsky130_fd_pr__cap_mim_m3_1_LFDY3D_0 vout sky130_fd_pr__pfet_01v8_HNK9NU_0/G sky130_fd_pr__cap_mim_m3_1_LFDY3D
+Xsky130_fd_pr__nfet_01v8_FEKDZH_0 vb1 vss vb1 vss sky130_fd_pr__nfet_01v8_FEKDZH
+Xsky130_fd_pr__pfet_01v8_T688GQ_0 vdd vb1 vdd vb1 sky130_fd_pr__pfet_01v8_T688GQ
 Xsky130_fd_pr__nfet_01v8_B6UCZH_0 sky130_fd_pr__pfet_01v8_HNK9NU_0/G sky130_fd_pr__nfet_01v8_FEKDZH_2/S
 + vin2 vss sky130_fd_pr__nfet_01v8_B6UCZH
-Xsky130_fd_pr__nfet_01v8_B6UCZH_1 sky130_fd_pr__pfet_01v8_ATEQEE_1/G sky130_fd_pr__nfet_01v8_FEKDZH_2/S
-+ vin1 vss sky130_fd_pr__nfet_01v8_B6UCZH
-Xsky130_fd_pr__nfet_01v8_FEKDZH_2 vss sky130_fd_pr__nfet_01v8_FEKDZH_2/S iref vss
-+ sky130_fd_pr__nfet_01v8_FEKDZH
 Xsky130_fd_pr__pfet_01v8_HNK9NU_0 vout vdd sky130_fd_pr__pfet_01v8_HNK9NU_0/G vdd
 + sky130_fd_pr__pfet_01v8_HNK9NU
+Xsky130_fd_pr__nfet_01v8_FEKDZH_2 vss sky130_fd_pr__nfet_01v8_FEKDZH_2/S vb1 vss sky130_fd_pr__nfet_01v8_FEKDZH
+Xsky130_fd_pr__nfet_01v8_B6UCZH_1 sky130_fd_pr__pfet_01v8_ATEQEE_1/G sky130_fd_pr__nfet_01v8_FEKDZH_2/S
++ vin1 vss sky130_fd_pr__nfet_01v8_B6UCZH
 .ends
 

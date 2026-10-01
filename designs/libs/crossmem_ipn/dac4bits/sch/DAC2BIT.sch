@@ -31,9 +31,9 @@ N -260 -150 -260 -130 {lab=#net5}
 N -260 -40 -260 -20 {lab=#net4}
 N -260 70 -260 90 {lab=#net3}
 N -260 180 -260 200 {lab=vrefl}
-C {sw.sym} 10 -100 0 0 {name=x1}
-C {sw.sym} 10 150 0 0 {name=x2}
-C {sw.sym} 400 10 0 0 {name=x3}
+C {/foss/designs/crossmem_ipn/designs/libs/crossmem_ipn/dac4bits/sch/sw.sym} 10 -100 0 0 {name=x1}
+C {/foss/designs/crossmem_ipn/designs/libs/crossmem_ipn/dac4bits/sch/sw.sym} 10 150 0 0 {name=x2}
+C {/foss/designs/crossmem_ipn/designs/libs/crossmem_ipn/dac4bits/sch/sw.sym} 400 10 0 0 {name=x3}
 C {devices/lab_pin.sym} -60 -180 0 0 {name=p3 sig_type=std_logic lab=b0}
 C {devices/lab_pin.sym} -60 70 0 0 {name=p4 sig_type=std_logic lab=b0}
 C {devices/lab_pin.sym} 330 -70 0 0 {name=p5 sig_type=std_logic lab=b1}
