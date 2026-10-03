@@ -25,7 +25,7 @@ C {devices/gnd.sym} -90 -250 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -90 -330 0 0 {name=p1 sig_type=std_logic lab=b0}
 C {devices/vsource.sym} 190 -260 0 1 {name=V1 value="PULSE(1.8 0 0 0.1n 0.1n 10n 20n)" savecurrent=false}
 C {devices/gnd.sym} 190 -230 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 800 -280 0 0 {name=V3 value=3.3 savecurrent=false}
+C {devices/vsource.sym} 800 -280 0 0 {name=V3 value=1.8 savecurrent=false}
 C {devices/vdd.sym} 800 -310 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} 800 -250 0 0 {name=l3 lab=GND}
 C {devices/vsource.sym} 430 -270 0 1 {name=V4 value="PULSE(1.8 0 0 0.1n 0.1n 20n 40n)" savecurrent=false}
