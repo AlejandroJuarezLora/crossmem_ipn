@@ -67,6 +67,7 @@ x1.v4
 x1.v3
 x1.v2
 x1.v1"}
+T {Primera simulación para mandar a S.C.} 1120 -250 0 0 0.4 0.4 {}
 N 10 -100 130 -100 {lab=x}
 N 10 -100 10 -60 {lab=x}
 N 430 -140 470 -140 {lab=out0}
